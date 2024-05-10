@@ -1,0 +1,64 @@
+/* Estilos para el navbar */
+.navbar-container {
+    background-color: #292b34;
+    /* Negro azulado */
+    color: white;
+    /* Letra blanca */
+    width: 200px;
+    /* Ancho del navbar */
+    position: fixed;
+    /* Fijar el navbar */
+    top: 0;
+    /* Posición en la parte superior */
+    left: 0;
+    /* Posición en el lado izquierdo */
+    height: 100%;
+    /* Altura completa */
+    padding-top: 0;
+    /* Eliminar espacio en la parte superior */
+}
+
+/* Estilos para el título */
+h1 {
+    border-bottom: 1px solid white;
+    /* Borde blanco en la parte inferior */
+    padding: 10px;
+    /* Espacio alrededor del título */
+    margin: 0;
+    /* Eliminar margen */
+}
+
+/* Estilos para los botones */
+button {
+    background-color: transparent;
+    /* Fondo transparente */
+    border: none;
+    /* Sin borde */
+    color: white;
+    /* Letra blanca */
+    padding: 10px 20px;
+    /* Espacio alrededor del texto */
+    display: block;
+    /* Mostrar como bloque para ocupar el ancho completo */
+    width: 100%;
+    /* Ancho completo */
+    text-align: left;
+    /* Alinear texto a la izquierda */
+    margin-bottom: 5px;
+    /* Espacio entre botones */
+}
+
+
+/* Estilos para el iframe */
+.iframeContainer {
+    margin-left: 200px;
+    /* Ancho del navbar */
+}
+
+.iframe {
+    width: calc(100% - 200px);
+    /* Ancho de la pantalla menos el ancho del navbar */
+    height: 100vh;
+    /* Altura de la pantalla */
+    border: none;
+}

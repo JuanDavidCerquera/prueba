@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../css/tablas.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h2>Clientes</h2>
+        <div class="filtros">
+            <div class="filtro">
+                <label>Filtrar por Nombre</label>
+                <input type="text" placeholder="Ingrese el nombre">
+            </div>
+            <div class="filtro">
+                <label>Filtrar por Ciudad</label>
+                <input type="text" placeholder="Ingrese la ciudad">
+            </div>
+            <div class="filtro">
+                <label>Filtrar por Estados</label>
+                <select id="estados">
+                    <option value=true>Activo</option>
+                    <option value=false>Inactivo</option>
+                </select>
+            </div>
+        </div>
+        <button>Aplicar filtros</button>
+        <button>Limpiar filtros</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Cliente</th>
+                    <th>Tipo Identificaion</th>
+                    <th>Identificacion</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>Ciudad</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="resultData">
+                <!-- Data will be filled here using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

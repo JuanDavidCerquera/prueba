@@ -1,0 +1,11 @@
+.filtros {
+    display: inline-block;
+    margin-right: 10px;
+    /* Ajusta el espacio entre los elementos según sea necesario */
+}
+
+.filtro {
+    display: block;
+    margin-bottom: 10px;
+    /* Ajusta el espacio entre los elementos según sea necesario */
+}
