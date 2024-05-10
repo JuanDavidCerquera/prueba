@@ -1,11 +1,48 @@
 .filtros {
-    display: inline-block;
-    margin-right: 10px;
-    /* Ajusta el espacio entre los elementos según sea necesario */
+    display: flex;
 }
 
 .filtro {
-    display: block;
-    margin-bottom: 10px;
-    /* Ajusta el espacio entre los elementos según sea necesario */
+    margin-right: 20px;
+    /* Espacio entre los elementos */
+    display: flex;
+    flex-direction: column;
+    /* Apilar elementos uno encima del otro */
+}
+
+/* Ajustes de estilo opcionales */
+label {
+    margin-bottom: 5px;
+    /* Espacio entre la etiqueta y el input/select */
+}
+
+input,
+select {
+    width: 150px;
+    /* Ancho de los inputs/selects */
+}
+
+/* Estilo para el botón de agregar filtros */
+.agregar-filtros {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón de limpiar filtros */
+.limpiar-filtros {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.botonesfiltro {
+    display: flex;
+    justify-content: flex-end;
+    /* Alinea los elementos al final del contenedor */
 }

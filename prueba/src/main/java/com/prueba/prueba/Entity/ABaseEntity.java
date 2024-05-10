@@ -14,6 +14,26 @@ public class ABaseEntity {
 	
 	@Column(name = "estado", nullable = false)
 	private Boolean estado;
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public Boolean getEstado() {
+		return estado;
+	}
+
+
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
+	}
 	
 
 }
