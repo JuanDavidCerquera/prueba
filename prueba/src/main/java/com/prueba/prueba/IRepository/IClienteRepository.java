@@ -17,6 +17,7 @@ public interface IClienteRepository extends IBaseRepository<Clientes, Long>{
 	        + "FROM clientes \r\n"
 	        + "WHERE \r\n"
 	        + "    (LOWER(nombre) LIKE LOWER(CONCAT('%', :nombre, '%'))) AND\r\n"
+	        + "    (:estado IS NULL OR estado = :estado) AND\r\n"
 	        + "    (LOWER(ciudad) LIKE LOWER(CONCAT('%', :ciudad, '%')))", nativeQuery = true)
-	List<Clientes> getByFilter(@Param("nombre") String nombre, @Param("ciudad") String ciudad);
+	List<Clientes> getByFilter(@Param("nombre") String nombre, @Param("ciudad") String ciudad, @Param("estado") Boolean estado);
 }

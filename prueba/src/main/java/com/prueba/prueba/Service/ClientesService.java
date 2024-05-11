@@ -23,7 +23,7 @@ public class ClientesService extends ABaseService<Clientes> implements IClientes
 	private IClienteRepository repo;
 
 	@Override
-	public List<Clientes> getByFilter(String nombre, String ciudad ) {
-		return repo.getByFilter(nombre, ciudad);
+	public List<Clientes> getByFilter(String nombre, String ciudad, Boolean estado ) {
+		return repo.getByFilter(nombre, ciudad,estado);
 	}
 }

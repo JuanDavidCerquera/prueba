@@ -20,11 +20,11 @@
         <div class="filtros">
             <div class="filtro">
                 <label>Filtrar por Nombre</label>
-                <input type="text" placeholder="Ingrese el nombre">
+                <input type="text" placeholder="Ingrese el nombre" id="filtername">
             </div>
             <div class="filtro">
                 <label>Filtrar por Ciudad</label>
-                <input type="text" placeholder="Ingrese la ciudad">
+                <input type="text" placeholder="Ingrese la ciudad" id="filterciudad">
             </div>
             <div class="filtro">
                 <label>Filtrar por Estados</label>
@@ -35,8 +35,8 @@
             </div>
         </div>
         <div class="botonesfiltro">
-            <button class="agregar-filtros">Aplicar filtros</button>
-            <button class="limpiar-filtros">Limpiar filtros</button>
+            <button class="agregar-filtros" onclick="filter()">Aplicar filtros</button>
+            <button class="limpiar-filtros" onclick="loadData()">Limpiar filtros</button>
         </div>
         <hr>
         <table>
