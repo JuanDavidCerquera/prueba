@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../css/agregar.css">
+</head>
+
+<body>
+    <h1>agregar nuevo cliente</h1>
+    <div class="contenedorinputs">
+        <div class="input">
+            <label>Tipo Identificaion</label>
+            <select id="tipo_identificaion"></select>
+        </div>
+        <div class="input">
+            <label>Identificaion</label>
+            <input class="inputstext" type="text" id="identificacion">
+        </div>
+        <div class="input">
+            <label>Nombre</label>
+            <input class="inputstext" type="text" id="nombre">
+        </div>
+    </div>
+    <br>
+    <div class="contenedorinputs">
+        <div class="input">
+            <label>Apellido</label>
+            <input class="inputstext" type="text" id="apellido">
+        </div>
+        <div class="input">
+            <label>Telefono</label>
+            <input class="inputstext" type="text" id="telefono">
+        </div>
+        <div class="input">
+            <label>Direccion</label>
+            <input class="inputstext" type="text" id="direccion">
+        </div>
+    </div>
+    <br>
+    <div class="contenedorinputs">
+        <div class="input">
+            <label>Ciudad</label>
+            <input class="inputstext" type="text" id="ciudad">
+        </div>
+        <div class="input">
+            <label>estado</label>
+            <input class="inputstext" type="text" id="estado">
+        </div>
+    </div>
+    <br>
+    <button class="botonagregar" onclick="save()">agregar</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="application/javascript" src="/js/agregarClientes.js"></script>
+    <script>findById(); typeDocument();</script>
+</body>
+
+</html>

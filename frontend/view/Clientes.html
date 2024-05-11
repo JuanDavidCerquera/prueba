@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
     <link rel="stylesheet" href="../css/tablas.css">
+
 </head>
 
 <body>
-
+    <input type="hidden" id="id">
+    <input type="hidden" id="estado">
 
     <div class="container">
         <h2>Clientes</h2>
+
+
         <div class="filtros">
             <div class="filtro">
                 <label>Filtrar por Nombre</label>
@@ -34,6 +38,7 @@
             <button class="agregar-filtros">Aplicar filtros</button>
             <button class="limpiar-filtros">Limpiar filtros</button>
         </div>
+        <hr>
         <table>
             <thead>
                 <tr>
@@ -45,11 +50,11 @@
                     <th>Telefono</th>
                     <th>Direccion</th>
                     <th>Ciudad</th>
-                    <th>Actions</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="resultData">
-                <!-- Data will be filled here using JavaScript -->
             </tbody>
         </table>
     </div>

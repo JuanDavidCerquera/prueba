@@ -13,7 +13,7 @@ public interface IBaseService<T extends ABaseEntity> {
 	T save(T entity)throws Exception;
 	void update(T entity, Long id)throws Exception;
 	void deleted(Long id)throws Exception;
-
+	void changeState(Long id)throws Exception;
 	
 	
 }

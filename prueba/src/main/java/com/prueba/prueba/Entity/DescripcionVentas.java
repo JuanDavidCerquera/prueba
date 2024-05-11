@@ -2,11 +2,15 @@ package com.prueba.prueba.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name= "descripcion_ventas")
 public class DescripcionVentas extends ABaseEntity{
+	
 	@Column(name = "cantidad")
 	private int cantidad;
 	
@@ -18,6 +22,13 @@ public class DescripcionVentas extends ABaseEntity{
 	
 	@Column(name = "sub_total")
 	private Double subTotal;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "ventas_id")
+	private Ventas ventas;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "productos_id")
+	private Productos productos;
 
 	public int getCantidad() {
 		return cantidad;
@@ -50,5 +61,22 @@ public class DescripcionVentas extends ABaseEntity{
 	public void setSubTotal(Double subTotal) {
 		this.subTotal = subTotal;
 	}
+
+	public Ventas getVentas() {
+		return ventas;
+	}
+
+	public void setVentas(Ventas ventas) {
+		this.ventas = ventas;
+	}
+
+	public Productos getProductos() {
+		return productos;
+	}
+
+	public void setProductos(Productos productos) {
+		this.productos = productos;
+	}
+	
 
 }

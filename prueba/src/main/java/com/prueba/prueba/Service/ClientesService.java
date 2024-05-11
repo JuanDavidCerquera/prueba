@@ -1,5 +1,7 @@
 package com.prueba.prueba.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,4 +21,9 @@ public class ClientesService extends ABaseService<Clientes> implements IClientes
 
 	@Autowired
 	private IClienteRepository repo;
+
+	@Override
+	public List<Clientes> getByFilter(String nombre, String ciudad ) {
+		return repo.getByFilter(nombre, ciudad);
+	}
 }

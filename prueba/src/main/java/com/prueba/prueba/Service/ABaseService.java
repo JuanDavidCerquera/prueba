@@ -3,9 +3,12 @@ package com.prueba.prueba.Service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.BeanUtils;
+
 import com.prueba.prueba.Entity.ABaseEntity;
 import com.prueba.prueba.IRepository.IBaseRepository;
 import com.prueba.prueba.IService.IBaseService;
+
 
 
 public abstract class ABaseService<T extends ABaseEntity> implements IBaseService<T>{
@@ -42,7 +45,10 @@ public abstract class ABaseService<T extends ABaseEntity> implements IBaseServic
 			throw new Exception("registro no encontrado");
 		}
 		  T existingEntity = op.get();
+		String[] ignoreProperties = {"id"};
+		BeanUtils.copyProperties(entity,existingEntity, ignoreProperties);
 		
+		  
 		  repository().save(existingEntity);
 	}
 
@@ -50,5 +56,16 @@ public abstract class ABaseService<T extends ABaseEntity> implements IBaseServic
 	public void deleted(Long id) throws Exception {
 		repository().deleteById(id);
 	}
+	@Override
+	public void changeState(Long id) throws Exception {
+		Optional<T> op = repository().findById(id);
+		if(op.isEmpty()) {
+			throw new Exception("registro no encontrado");
+		}
+		  T existingEntity = op.get();
+		  existingEntity.setEstado(!existingEntity.getEstado());
+		  repository().save(existingEntity);
+	}
+	
 
 }

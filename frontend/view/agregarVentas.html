@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../css/agregar.css">
+</head>
+
+<body>
+    <h1>agregar nuevo producto</h1>
+    <div class="contenedorinputs">
+        <div class="input">
+            <label>Nombre del Producto</label>
+            <input class="inputstext" type="text" id="nombreProducto">
+
+        </div>
+        <div class="input">
+            <label>Descripcion</label>
+            <input class="inputstext" type="text" id="descripcion">
+        </div>
+        <div class="input">
+            <label>Cantidad</label>
+            <input class="inputstext" type="text" id="cantidad">
+        </div>
+
+
+        <div class="input">
+            <label>Precio</label>
+            <input class="inputstext" type="text" id="precio">
+        </div>
+    </div>
+    <br>
+    <div class="contenedorinputs">
+        <div class="input">
+            <label>%IVA</label>
+            <input class="inputstext" type="text" id="porcentajeIva">
+        </div>
+        <div class="input">
+            <label>%descuento</label>
+            <input class="inputstext" type="text" id="porcentajeDescuento">
+        </div>
+
+        <div class="input">
+            <label>estado</label>
+            <input class="inputstext" type="text" id="estado">
+        </div>
+        <button class="botonagregar" onclick="save()">agregar</button>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="application/javascript" src="/js/agregarProducto.js"></script>
+    <script>findById();</script>
+</body>
+
+</html>

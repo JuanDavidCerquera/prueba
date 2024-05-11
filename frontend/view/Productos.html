@@ -1,17 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>clientes Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productos</title>
+    <link rel="stylesheet" href="../css/tablas.css">
 </head>
 
 <body>
-    <h1>productos</h1>
+    <input type="hidden" id="id">
+    <input type="hidden" id="estado">
+
+    <div class="container">
+        <h2>productos</h2>
+
+
+        <div class="filtros">
+            <div class="filtro">
+                <label>Filtrar por Nombre</label>
+                <input type="text" placeholder="Ingrese el nombre">
+            </div>
+            <div class="filtro">
+                <label>Filtrar por Estados</label>
+                <select id="estados">
+                    <option value=true>Activo</option>
+                    <option value=false>Inactivo</option>
+                </select>
+            </div>
+            <div class="botonesfiltro">
+                <button class="agregar-filtros">filtrar</button>
+                <!-- <button class="limpiar-filtros">Limpiar filtros</button> -->
+            </div>
+        </div>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Producto</th>
+                    <th>Nombre Producto</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>% IVA</th>
+                    <th>Descuento</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="resultData">
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="application/javascript" src="/js/productos.js"></script>
+
+    <script>
+        loadData();
+    </script>
 </body>
 
 </html>

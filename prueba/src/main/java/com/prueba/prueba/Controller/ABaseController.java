@@ -62,6 +62,15 @@ public class ABaseController<T extends ABaseEntity, S extends IBaseService<T>>{
 			return ResponseEntity.internalServerError().body(new ApiResponseDto<>(e.getMessage(), null, null));
 		}
 	}
+	@PutMapping("/estate/{id}")
+	private ResponseEntity<ApiResponseDto<T>> changeState(@PathVariable Long id) {
+		try {
+			service.changeState(id);
+		return ResponseEntity.ok(new ApiResponseDto<T>("Datos Obtenidos", null, true));
+		}catch(Exception e) {
+			return ResponseEntity.internalServerError().body(new ApiResponseDto<>(e.getMessage(), null, null));
+		}
+	}
 	
 	@DeleteMapping("{id}")
 	private ResponseEntity<ApiResponseDto<T>> delete(@PathVariable Long id) {

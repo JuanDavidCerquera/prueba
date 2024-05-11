@@ -1,0 +1,26 @@
+.contenedorinputs {
+    display: flex;
+}
+
+.input {
+    margin-right: 20px;
+    /* Espacio entre los elementos */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Apilar elementos uno encima del otro */
+}
+
+.botonagregar {
+    background-color: green;
+    color: white;
+    /* Cambia el color del texto para asegurarte de que sea visible */
+    border: none;
+    /* Quita el borde para un aspecto más limpio */
+    padding: 10px 20px;
+    /* Ajusta el padding según sea necesario */
+    border-radius: 5px;
+    /* Agrega esquinas redondeadas */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}

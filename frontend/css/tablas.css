@@ -46,3 +46,26 @@ select {
     justify-content: flex-end;
     /* Alinea los elementos al final del contenedor */
 }
+
+
+.buttonLista {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: blue;
+}
+
+.ButtonDetalle {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ButtonDetalle:hover {
+    background: darkblue;
+
+}
