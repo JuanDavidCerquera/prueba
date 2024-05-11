@@ -82,4 +82,8 @@ public class ABaseController<T extends ABaseEntity, S extends IBaseService<T>>{
 		}
 	}
 	
+	@GetMapping("/count")
+	private Long count() throws Exception {
+		return service.count();
+	}
 }

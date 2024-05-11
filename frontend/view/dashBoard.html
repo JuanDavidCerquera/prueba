@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <h1>DashBoar</h1>
+    <div class="container-full">
+        <div class="container cliente">
+            <input type="number" id="numeroCliente">
+            <h1>Clientes</h1>
+            <button class="botonesInfo">Mas informacion</button>
+        </div>
+        <div class="container ventas">
+            <input type="number" id="numeroVentas">
+            <h1>Ventas</h1>
+            <button class="botonesInfo">Mas informacion</button>
+        </div>
+        <div class="container productos">
+            <input type="number" id="numeroProductos">
+            <h1>Productos</h1>
+            <button class="botonesInfo">Mas informacion</button>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <label>Bajo inventario</label>
+            <tr>
+                <th>#</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody id="resultData"></tbody>
+    </table>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="application/javascript" src="/js/dashboard.js"></script>
+<script>countClientes()
+    countVentas()
+    countProductos()
+    count()
+</script>
+
+</html>

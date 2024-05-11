@@ -19,4 +19,9 @@ public interface IProductosRepository extends IBaseRepository<Productos, Long>{
 			+ "    (lower(nombre_producto) LIKE lower(concat('%',:nombre,'%'))) and\r\n"
 			+ "	(:estado IS NULL OR estado = :estado);", nativeQuery = true)
 	List<Productos> getByFilter(@Param("nombre") String nombre, @Param("estado") Boolean estado);
+	
+	@Query(value="Select *\r\n"
+			+ "From productos\r\n"
+			+ "order by cantidad",nativeQuery = true)
+	List<Productos> getByCantidad();
 }

@@ -1,0 +1,20 @@
+.cliente {
+    background-color: blue;
+}
+
+.ventas {
+    background-color: green;
+}
+
+.productos {
+    background-color: red;
+}
+
+.botonesInfo {
+    background: none;
+    border: none;
+}
+
+.container-full {
+    display: flex;
+}

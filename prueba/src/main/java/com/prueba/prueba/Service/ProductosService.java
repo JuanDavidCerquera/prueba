@@ -27,4 +27,9 @@ public class ProductosService extends ABaseService<Productos> implements IProduc
 		return repo.getByFilter(nombre, estado);
 	}
 
+	@Override
+	public List<Productos> getByCantidad() {
+		return repo.getByCantidad();
+	}
+
 }

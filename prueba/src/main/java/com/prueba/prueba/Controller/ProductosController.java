@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +29,14 @@ public class ProductosController extends ABaseController<Productos, IProductosSe
 	    private ResponseEntity<ApiResponseDto<List<Productos>>> getByFilter(@RequestBody ProductofilterDto filterRequest) {
 	        try {
 	            return ResponseEntity.ok(new ApiResponseDto<>("Datos Obtenidos",service.getByFilter(filterRequest.getNombre(), filterRequest.getEstado()), true));
+	        } catch (Exception e) {
+	            return ResponseEntity.internalServerError().body(new ApiResponseDto<>(e.getMessage(), null, false));
+	        }
+	    }
+	  @GetMapping("/cantidad")
+	    private ResponseEntity<ApiResponseDto<List<Productos>>> getByCantidad() {
+	        try {
+	            return ResponseEntity.ok(new ApiResponseDto<List<Productos>>("Datos Obtenidos",  service.getByCantidad(), true));
 	        } catch (Exception e) {
 	            return ResponseEntity.internalServerError().body(new ApiResponseDto<>(e.getMessage(), null, false));
 	        }

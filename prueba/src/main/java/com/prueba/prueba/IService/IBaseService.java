@@ -14,6 +14,7 @@ public interface IBaseService<T extends ABaseEntity> {
 	void update(T entity, Long id)throws Exception;
 	void deleted(Long id)throws Exception;
 	void changeState(Long id)throws Exception;
+	Long count() throws Exception;
 	
 	
 }

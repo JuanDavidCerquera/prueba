@@ -67,5 +67,9 @@ public abstract class ABaseService<T extends ABaseEntity> implements IBaseServic
 		  repository().save(existingEntity);
 	}
 	
+	@Override
+	public Long count() throws Exception{
+		return repository().count();
+	}
 
 }
